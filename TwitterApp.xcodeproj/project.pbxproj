@@ -13,8 +13,8 @@
 		AA3DBDF01C43A5AE00DB23A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA3DBDEF1C43A5AE00DB23A4 /* Assets.xcassets */; };
 		AA3DBDF31C43A5AE00DB23A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA3DBDF11C43A5AE00DB23A4 /* LaunchScreen.storyboard */; };
 		AA3DBDFD1C43AA2400DB23A4 /* TweetsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3DBDFC1C43AA2400DB23A4 /* TweetsTableViewController.m */; };
-		AA3DBE011C43AD3100DB23A4 /* icon_tabbar_twitter_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA3DBE001C43AD3100DB23A4 /* icon_tabbar_twitter_selected@3x.png */; };
 		AA939CA11C43B60800E37C2F /* TweetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AA939CA01C43B60800E37C2F /* TweetCell.m */; };
+		AA939CA41C43C69400E37C2F /* photo.png in Resources */ = {isa = PBXBuildFile; fileRef = AA939CA31C43C69400E37C2F /* photo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,9 +28,9 @@
 		AA3DBDF41C43A5AE00DB23A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA3DBDFB1C43AA2400DB23A4 /* TweetsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TweetsTableViewController.h; path = Classes/Controllers/TweetsTableViewController.h; sourceTree = "<group>"; };
 		AA3DBDFC1C43AA2400DB23A4 /* TweetsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TweetsTableViewController.m; path = Classes/Controllers/TweetsTableViewController.m; sourceTree = "<group>"; };
-		AA3DBE001C43AD3100DB23A4 /* icon_tabbar_twitter_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_tabbar_twitter_selected@3x.png"; path = "../../../Downloads/TwitterApp 2/TwitterApp/TwitterApp/Resources/Images/icon_tabbar_twitter_selected@3x.png"; sourceTree = "<group>"; };
 		AA939C9F1C43B60800E37C2F /* TweetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TweetCell.h; path = Classes/Components/TweetCell.h; sourceTree = "<group>"; };
 		AA939CA01C43B60800E37C2F /* TweetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TweetCell.m; path = Classes/Components/TweetCell.m; sourceTree = "<group>"; };
+		AA939CA31C43C69400E37C2F /* photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = photo.png; path = ../../../Downloads/photo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +68,7 @@
 				AA3DBDEF1C43A5AE00DB23A4 /* Assets.xcassets */,
 				AA3DBDF11C43A5AE00DB23A4 /* LaunchScreen.storyboard */,
 				AA3DBDF41C43A5AE00DB23A4 /* Info.plist */,
-				AA3DBE001C43AD3100DB23A4 /* icon_tabbar_twitter_selected@3x.png */,
+				AA939CA31C43C69400E37C2F /* photo.png */,
 				AA3DBDE31C43A5AE00DB23A4 /* Supporting Files */,
 			);
 			path = TwitterApp;
@@ -168,10 +168,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA939CA41C43C69400E37C2F /* photo.png in Resources */,
 				AA3DBDF31C43A5AE00DB23A4 /* LaunchScreen.storyboard in Resources */,
 				AA3DBDF01C43A5AE00DB23A4 /* Assets.xcassets in Resources */,
 				AA3DBDEE1C43A5AE00DB23A4 /* Main.storyboard in Resources */,
-				AA3DBE011C43AD3100DB23A4 /* icon_tabbar_twitter_selected@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

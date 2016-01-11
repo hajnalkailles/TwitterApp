@@ -7,8 +7,10 @@
 //
 
 #import "TweetCell.h"
+#import <UIKit/UIKit.h>
 
 @interface TweetCell()
+
 
 @property (weak, nonatomic) IBOutlet UIImageView *profilePicture;
 @property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
@@ -19,5 +21,14 @@
 @end
 
 @implementation TweetCell
+
+-(void)setRoundedImage
+{
+    self.profilePicture.layer.cornerRadius = 46.0/2.0;
+    self.profilePicture.layer.borderColor = [UIColor blackColor].CGColor;
+    self.profilePicture.layer.borderWidth = 1.0;
+    self.profilePicture.layer.masksToBounds = NO;
+    self.profilePicture.clipsToBounds = YES;
+}
 
 @end

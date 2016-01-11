@@ -11,11 +11,16 @@
 
 @implementation TweetsTableViewController
 
+-(void)viewDidLoad
+{
+    self.tableView.estimatedRowHeight = 50.0;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     TweetCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"tweetCell"];
-    
-    
+    [cell setRoundedImage];
     return cell;
 }
 
