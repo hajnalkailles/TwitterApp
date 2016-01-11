@@ -14,7 +14,8 @@
 		AA3DBDF31C43A5AE00DB23A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA3DBDF11C43A5AE00DB23A4 /* LaunchScreen.storyboard */; };
 		AA3DBDFD1C43AA2400DB23A4 /* TweetsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3DBDFC1C43AA2400DB23A4 /* TweetsTableViewController.m */; };
 		AA939CA11C43B60800E37C2F /* TweetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AA939CA01C43B60800E37C2F /* TweetCell.m */; };
-		AA939CA41C43C69400E37C2F /* photo.png in Resources */ = {isa = PBXBuildFile; fileRef = AA939CA31C43C69400E37C2F /* photo.png */; };
+		AA939CAB1C43CEB600E37C2F /* photo.png in Resources */ = {isa = PBXBuildFile; fileRef = AA939CAA1C43CEB600E37C2F /* photo.png */; };
+		AA939CAE1C43D51C00E37C2F /* TweetCellData.m in Sources */ = {isa = PBXBuildFile; fileRef = AA939CAD1C43D51C00E37C2F /* TweetCellData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +31,9 @@
 		AA3DBDFC1C43AA2400DB23A4 /* TweetsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TweetsTableViewController.m; path = Classes/Controllers/TweetsTableViewController.m; sourceTree = "<group>"; };
 		AA939C9F1C43B60800E37C2F /* TweetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TweetCell.h; path = Classes/Components/TweetCell.h; sourceTree = "<group>"; };
 		AA939CA01C43B60800E37C2F /* TweetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TweetCell.m; path = Classes/Components/TweetCell.m; sourceTree = "<group>"; };
-		AA939CA31C43C69400E37C2F /* photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = photo.png; path = ../../../Downloads/photo.png; sourceTree = "<group>"; };
+		AA939CAA1C43CEB600E37C2F /* photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo.png; sourceTree = "<group>"; };
+		AA939CAC1C43D51C00E37C2F /* TweetCellData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TweetCellData.h; path = "Classes/View Data/TweetCellData.h"; sourceTree = "<group>"; };
+		AA939CAD1C43D51C00E37C2F /* TweetCellData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TweetCellData.m; path = "Classes/View Data/TweetCellData.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +71,7 @@
 				AA3DBDEF1C43A5AE00DB23A4 /* Assets.xcassets */,
 				AA3DBDF11C43A5AE00DB23A4 /* LaunchScreen.storyboard */,
 				AA3DBDF41C43A5AE00DB23A4 /* Info.plist */,
-				AA939CA31C43C69400E37C2F /* photo.png */,
+				AA939CAA1C43CEB600E37C2F /* photo.png */,
 				AA3DBDE31C43A5AE00DB23A4 /* Supporting Files */,
 			);
 			path = TwitterApp;
@@ -89,6 +92,7 @@
 			children = (
 				AA939CA21C43B60F00E37C2F /* Components */,
 				AA3DBDFF1C43AA3300DB23A4 /* Controllers */,
+				AA939CA81C43CB8500E37C2F /* View Data */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -109,6 +113,15 @@
 				AA939CA01C43B60800E37C2F /* TweetCell.m */,
 			);
 			name = Components;
+			sourceTree = "<group>";
+		};
+		AA939CA81C43CB8500E37C2F /* View Data */ = {
+			isa = PBXGroup;
+			children = (
+				AA939CAC1C43D51C00E37C2F /* TweetCellData.h */,
+				AA939CAD1C43D51C00E37C2F /* TweetCellData.m */,
+			);
+			name = "View Data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,9 +181,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA939CA41C43C69400E37C2F /* photo.png in Resources */,
 				AA3DBDF31C43A5AE00DB23A4 /* LaunchScreen.storyboard in Resources */,
 				AA3DBDF01C43A5AE00DB23A4 /* Assets.xcassets in Resources */,
+				AA939CAB1C43CEB600E37C2F /* photo.png in Resources */,
 				AA3DBDEE1C43A5AE00DB23A4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -183,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA3DBDFD1C43AA2400DB23A4 /* TweetsTableViewController.m in Sources */,
+				AA939CAE1C43D51C00E37C2F /* TweetCellData.m in Sources */,
 				AA3DBDE81C43A5AE00DB23A4 /* AppDelegate.m in Sources */,
 				AA3DBDE51C43A5AE00DB23A4 /* main.m in Sources */,
 				AA939CA11C43B60800E37C2F /* TweetCell.m in Sources */,
