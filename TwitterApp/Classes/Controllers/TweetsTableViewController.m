@@ -9,6 +9,7 @@
 #import "TweetsTableViewController.h"
 #import "TweetCell.h"
 #import "TweetCellData.h"
+#import "TwitterManager.h"
 
 @implementation TweetsTableViewController
 
@@ -29,8 +30,15 @@
     return cell;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section      {
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
     return 5;
 }
+
+- (IBAction)postTweet:(UIBarButtonItem *)sender
+{
+    [self presentViewController:[TwitterManager composeTweet] animated:YES completion:NULL];
+}
+
 
 @end
