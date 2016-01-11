@@ -22,11 +22,8 @@
 {
     TweetCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"tweetCell"];
     
-    TweetCellData *tweet = [[TweetCellData alloc] init];
-    tweet.twitterUsername = @"@test_user";
-    tweet.tweetMessage = @"This is my tweet message!";
-    tweet.tweetTime = @"2h";
-    tweet.profilePictureURL = @"https://upload.wikimedia.org/wikipedia/en/7/70/Shawn_Tok_Profile.jpg";
+    TweetCellData *tweet = [[TweetCellData alloc] initWithUsername:@"@test_user" withTweetMessage:@"This is my tweet message!" withTweetTime:@"2h" withProfilePictureURL:@"https://upload.wikimedia.org/wikipedia/en/7/70/Shawn_Tok_Profile.jpg"];
+    
     cell.tweetCellData = tweet;
     
     return cell;
