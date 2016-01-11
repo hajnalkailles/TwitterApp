@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  TweetCell.h
 //  TwitterApp
 //
 //  Created by Hegyi Hajnalka on 11/01/16.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface TweetCell : UITableViewCell
 
 @end
-
