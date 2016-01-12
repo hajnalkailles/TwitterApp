@@ -10,13 +10,17 @@
 
 @implementation TweetCellData
 
--(TweetCellData *)initWithUsername:(NSString *)twitterUsername withTweetMessage:(NSString *)tweetMessage withTweetTime:(NSString *)tweetTime withProfilePictureURL:(NSString *)imageURL
+
+-(instancetype)initWithUsername:(NSString *)twitterUsername withTweetMessage:(NSString *)tweetMessage withTweetTime:(NSString *)tweetTime withProfilePictureURL:(NSString *)imageURL
 {
-    _twitterUsername = twitterUsername;
-    _tweetMessage = tweetMessage;
-    _tweetTime = tweetTime;
-    _profilePictureURL = imageURL;
-    
+    self = [super init];
+    if (self)
+    {
+        _twitterUsername = twitterUsername;
+        _tweetMessage = tweetMessage;
+        _tweetTime = tweetTime;
+        _profilePictureURL = imageURL;
+    }
     return self;
 }
 

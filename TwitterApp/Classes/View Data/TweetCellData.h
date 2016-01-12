@@ -10,11 +10,11 @@
 
 @interface TweetCellData : NSObject
 
-@property (nonatomic, readonly) NSString *twitterUsername;
-@property (nonatomic, readonly) NSString *tweetMessage;
-@property (nonatomic, readonly) NSString *tweetTime;
-@property (nonatomic, readonly) NSString *profilePictureURL;
+@property (nonatomic, copy, readonly) NSString *twitterUsername;
+@property (nonatomic, copy, readonly) NSString *tweetMessage;
+@property (nonatomic, copy, readonly) NSString *tweetTime;
+@property (nonatomic, copy, readonly) NSString *profilePictureURL;
 
--(TweetCellData *)initWithUsername:(NSString *)twitterUsername withTweetMessage:(NSString *)tweetMessage withTweetTime:(NSString *)tweetTime withProfilePictureURL:(NSString *)imageURL;
+-(instancetype)initWithUsername:(NSString *)twitterUsername withTweetMessage:(NSString *)tweetMessage withTweetTime:(NSString *)tweetTime withProfilePictureURL:(NSString *)imageURL;
 
 @end

@@ -59,7 +59,6 @@
                 }];
         [task resume];
     }
-
 }
 
 @end
