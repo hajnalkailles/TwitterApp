@@ -11,8 +11,7 @@
 
 @interface Tweet : NSObject
 
-@property (nonatomic, readonly, copy) NSDictionary *tweetData;
-
--(Tweet *)initWithDictionary:(NSDictionary *)tweetDictionary;
+-(instancetype)initWithDictionary:(NSDictionary *)tweetDictionary;
+-(TweetCellData *)cellDataRepresentation;
 
 @end

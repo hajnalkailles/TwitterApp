@@ -16,7 +16,7 @@
 
 @interface TwitterManager : NSObject
 
-typedef void(^tweetsLoadedCompletion)(NSDictionary*);
+typedef void(^tweetsLoadedCompletion)(NSArray*);
 
 -(SLComposeViewController *)composeTweet;
 -(void)getRecentTweetsOnCompletion:(tweetsLoadedCompletion)completionBlock;

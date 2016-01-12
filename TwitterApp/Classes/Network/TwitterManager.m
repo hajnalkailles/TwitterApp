@@ -9,6 +9,7 @@
 #import "TwitterManager.h"
 #import <Social/Social.h>
 #import <Accounts/Accounts.h>
+#import "Tweet.h"
 
 @implementation TwitterManager
 
@@ -43,7 +44,13 @@
                         completionHandler:^(NSURL *localfile, NSURLResponse *response, NSError *error){
                             if (!error){
                                 NSData *jsonResults = [NSData dataWithContentsOfURL: localfile];
-                                NSMutableDictionary *tweetList =  [NSJSONSerialization JSONObjectWithData:jsonResults options:NSJSONReadingMutableContainers error:NULL];
+                                NSDictionary *tweetDictionary =  [NSJSONSerialization JSONObjectWithData:jsonResults options:NSJSONReadingMutableContainers error:NULL];
+                                
+                                NSMutableArray *tweetList = [[NSMutableArray alloc] init];
+                                for (NSDictionary* tweet in tweetDictionary)
+                                {
+                                    [tweetList addObject:[[Tweet alloc] initWithDictionary: tweet]];
+                                }
                                 completionBlock(tweetList);
                             }
                         }];

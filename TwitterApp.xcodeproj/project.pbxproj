@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AA2551D01C451F880029ED2B /* TweetCellData+Tweet.m in Sources */ = {isa = PBXBuildFile; fileRef = AA2551CF1C451F880029ED2B /* TweetCellData+Tweet.m */; };
 		AA3DBDE51C43A5AE00DB23A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3DBDE41C43A5AE00DB23A4 /* main.m */; };
 		AA3DBDE81C43A5AE00DB23A4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3DBDE71C43A5AE00DB23A4 /* AppDelegate.m */; };
 		AA3DBDEE1C43A5AE00DB23A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA3DBDEC1C43A5AE00DB23A4 /* Main.storyboard */; };
@@ -23,8 +22,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AA2551CE1C451F880029ED2B /* TweetCellData+Tweet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "TweetCellData+Tweet.h"; path = "Classes/View Data/TweetCellData+Tweet.h"; sourceTree = "<group>"; };
-		AA2551CF1C451F880029ED2B /* TweetCellData+Tweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "TweetCellData+Tweet.m"; path = "Classes/View Data/TweetCellData+Tweet.m"; sourceTree = "<group>"; };
 		AA3DBDE01C43A5AE00DB23A4 /* TwitterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA3DBDE41C43A5AE00DB23A4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AA3DBDE61C43A5AE00DB23A4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -135,8 +132,6 @@
 			children = (
 				AA939CAC1C43D51C00E37C2F /* TweetCellData.h */,
 				AA939CAD1C43D51C00E37C2F /* TweetCellData.m */,
-				AA2551CE1C451F880029ED2B /* TweetCellData+Tweet.h */,
-				AA2551CF1C451F880029ED2B /* TweetCellData+Tweet.m */,
 			);
 			name = "View Data";
 			sourceTree = "<group>";
@@ -237,7 +232,6 @@
 				AA939CB31C43EA7900E37C2F /* TwitterManager.m in Sources */,
 				AA3DBDE51C43A5AE00DB23A4 /* main.m in Sources */,
 				AA939CA11C43B60800E37C2F /* TweetCell.m in Sources */,
-				AA2551D01C451F880029ED2B /* TweetCellData+Tweet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
