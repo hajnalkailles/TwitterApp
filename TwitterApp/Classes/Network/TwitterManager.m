@@ -12,7 +12,7 @@
 
 @implementation TwitterManager
 
-+(SLComposeViewController *)composeTweet
+-(SLComposeViewController *)composeTweet
 {
     SLComposeViewController *tweet = nil;
     if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
@@ -23,7 +23,7 @@
     return tweet;
 }
 
-+(void)getRecentTweets
+-(void)getRecentTweetsOnCompletion:(tweetsLoadedCompletion) completionBlock
 {
     ACAccountStore *accountStore = [[ACAccountStore alloc] init];
     ACAccountType *accountType = [accountStore accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierTwitter];
@@ -44,9 +44,7 @@
                             if (!error){
                                 NSData *jsonResults = [NSData dataWithContentsOfURL: localfile];
                                 NSMutableDictionary *tweetList =  [NSJSONSerialization JSONObjectWithData:jsonResults options:NSJSONReadingMutableContainers error:NULL];
-                                dispatch_async(dispatch_get_main_queue(), ^{
-                                    [[NSNotificationCenter defaultCenter] postNotificationName:TWEETS_RECEIVED_NOTIFICATION object:nil userInfo:tweetList];
-                                });
+                                completionBlock(tweetList);
                             }
                         }];
                     [task resume];

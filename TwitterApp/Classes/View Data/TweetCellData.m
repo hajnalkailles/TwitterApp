@@ -10,7 +10,6 @@
 
 @implementation TweetCellData
 
-
 -(instancetype)initWithUsername:(NSString *)twitterUsername withTweetMessage:(NSString *)tweetMessage withTweetTime:(NSString *)tweetTime withProfilePictureURL:(NSString *)imageURL
 {
     self = [super init];

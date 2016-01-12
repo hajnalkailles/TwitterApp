@@ -10,18 +10,32 @@
 #import "TweetCell.h"
 #import "TweetCellData.h"
 #import "TwitterManager.h"
+#import "Tweet.h"
+#import "TweetCellData+Tweet.h"
+
+@interface TweetsTableViewController()
+@property (nonatomic, strong) TwitterManager *twitterManager;
+@property (nonatomic, strong) NSMutableArray *tweetArray;  //of Tweets
+@end
 
 @implementation TweetsTableViewController
 
--(void)awakeFromNib
+-(TwitterManager *)twitterManager
 {
-    [super awakeFromNib];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didFinishLoadingTweets:) name:TWEETS_RECEIVED_NOTIFICATION object:nil];
+    if (!_twitterManager)
+    {
+        _twitterManager = [[TwitterManager alloc] init];
+    }
+    return _twitterManager;
 }
 
--(void)didFinishLoadingTweets:(NSNotification *)note
+-(NSMutableArray *)tweetArray
 {
-    NSLog(@"%@", note.userInfo);
+    if (!_tweetArray)
+    {
+        _tweetArray = [[NSMutableArray alloc] init];
+    }
+    return _tweetArray;
 }
 
 -(void)viewDidLoad
@@ -30,28 +44,33 @@
     self.tableView.estimatedRowHeight = 50.0;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     
-    [TwitterManager getRecentTweets];
+    [self.twitterManager getRecentTweetsOnCompletion:^(NSDictionary* tweetsDictionary) {
+        for (NSDictionary* tweet in tweetsDictionary)
+        {
+            [self.tweetArray addObject:[[Tweet alloc] initWithDictionary: tweet]];
+        }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tableView reloadData];
+        });
+    }];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     TweetCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"tweetCell"];
-    
-    //sample data
-    TweetCellData *tweet = [[TweetCellData alloc] initWithUsername:@"@test_user" withTweetMessage:@"This is my tweet message!" withTweetTime:@"2h" withProfilePictureURL:@"https://upload.wikimedia.org/wikipedia/en/7/70/Shawn_Tok_Profile.jpg"];
-    cell.tweetCellData = tweet;
-    
+    Tweet *newTweet = [self.tweetArray objectAtIndex:indexPath.row];
+    cell.tweetCellData = [TweetCellData cellDataRepresentationForTweetDictionary:newTweet.tweetData];
     return cell;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
+    return [self.tweetArray count];
 }
 
 - (IBAction)postTweet:(UIBarButtonItem *)sender
 {
-    [self presentViewController:[TwitterManager composeTweet] animated:YES completion:NULL];
+    [self presentViewController:[self.twitterManager composeTweet] animated:YES completion:NULL];
 }
 
 

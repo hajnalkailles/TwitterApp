@@ -14,11 +14,11 @@
 #define TWITTER_FETCH_COUNT_KEY @"count"
 #define TWITTER_FETCH_COUNT_VALUE @"25"
 
-#define TWEETS_RECEIVED_NOTIFICATION @"TweetsReceived"
-
 @interface TwitterManager : NSObject
 
-+(SLComposeViewController *)composeTweet;
-+(void)getRecentTweets;
+typedef void(^tweetsLoadedCompletion)(NSDictionary*);
+
+-(SLComposeViewController *)composeTweet;
+-(void)getRecentTweetsOnCompletion:(tweetsLoadedCompletion)completionBlock;
 
 @end

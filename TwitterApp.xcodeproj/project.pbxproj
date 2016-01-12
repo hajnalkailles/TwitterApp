@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA2551D01C451F880029ED2B /* TweetCellData+Tweet.m in Sources */ = {isa = PBXBuildFile; fileRef = AA2551CF1C451F880029ED2B /* TweetCellData+Tweet.m */; };
 		AA3DBDE51C43A5AE00DB23A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3DBDE41C43A5AE00DB23A4 /* main.m */; };
 		AA3DBDE81C43A5AE00DB23A4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3DBDE71C43A5AE00DB23A4 /* AppDelegate.m */; };
 		AA3DBDEE1C43A5AE00DB23A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA3DBDEC1C43A5AE00DB23A4 /* Main.storyboard */; };
@@ -18,9 +19,12 @@
 		AA939CAE1C43D51C00E37C2F /* TweetCellData.m in Sources */ = {isa = PBXBuildFile; fileRef = AA939CAD1C43D51C00E37C2F /* TweetCellData.m */; };
 		AA939CB01C43E9B000E37C2F /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA939CAF1C43E9B000E37C2F /* Social.framework */; };
 		AA939CB31C43EA7900E37C2F /* TwitterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AA939CB21C43EA7900E37C2F /* TwitterManager.m */; };
+		AA939CB71C45145100E37C2F /* Tweet.m in Sources */ = {isa = PBXBuildFile; fileRef = AA939CB61C45145100E37C2F /* Tweet.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AA2551CE1C451F880029ED2B /* TweetCellData+Tweet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "TweetCellData+Tweet.h"; path = "Classes/View Data/TweetCellData+Tweet.h"; sourceTree = "<group>"; };
+		AA2551CF1C451F880029ED2B /* TweetCellData+Tweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "TweetCellData+Tweet.m"; path = "Classes/View Data/TweetCellData+Tweet.m"; sourceTree = "<group>"; };
 		AA3DBDE01C43A5AE00DB23A4 /* TwitterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA3DBDE41C43A5AE00DB23A4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AA3DBDE61C43A5AE00DB23A4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -39,6 +43,8 @@
 		AA939CAF1C43E9B000E37C2F /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		AA939CB11C43EA7900E37C2F /* TwitterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TwitterManager.h; path = Classes/Network/TwitterManager.h; sourceTree = "<group>"; };
 		AA939CB21C43EA7900E37C2F /* TwitterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TwitterManager.m; path = Classes/Network/TwitterManager.m; sourceTree = "<group>"; };
+		AA939CB51C45145100E37C2F /* Tweet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tweet.h; path = Classes/Model/Tweet.h; sourceTree = "<group>"; };
+		AA939CB61C45145100E37C2F /* Tweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tweet.m; path = Classes/Model/Tweet.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,7 @@
 			children = (
 				AA939CA21C43B60F00E37C2F /* Components */,
 				AA3DBDFF1C43AA3300DB23A4 /* Controllers */,
+				AA939CB81C45145500E37C2F /* Model */,
 				AA939CB41C43EA8200E37C2F /* Network */,
 				AA939CA81C43CB8500E37C2F /* View Data */,
 			);
@@ -128,6 +135,8 @@
 			children = (
 				AA939CAC1C43D51C00E37C2F /* TweetCellData.h */,
 				AA939CAD1C43D51C00E37C2F /* TweetCellData.m */,
+				AA2551CE1C451F880029ED2B /* TweetCellData+Tweet.h */,
+				AA2551CF1C451F880029ED2B /* TweetCellData+Tweet.m */,
 			);
 			name = "View Data";
 			sourceTree = "<group>";
@@ -139,6 +148,15 @@
 				AA939CB21C43EA7900E37C2F /* TwitterManager.m */,
 			);
 			name = Network;
+			sourceTree = "<group>";
+		};
+		AA939CB81C45145500E37C2F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AA939CB51C45145100E37C2F /* Tweet.h */,
+				AA939CB61C45145100E37C2F /* Tweet.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,9 +233,11 @@
 				AA3DBDFD1C43AA2400DB23A4 /* TweetsTableViewController.m in Sources */,
 				AA939CAE1C43D51C00E37C2F /* TweetCellData.m in Sources */,
 				AA3DBDE81C43A5AE00DB23A4 /* AppDelegate.m in Sources */,
+				AA939CB71C45145100E37C2F /* Tweet.m in Sources */,
 				AA939CB31C43EA7900E37C2F /* TwitterManager.m in Sources */,
 				AA3DBDE51C43A5AE00DB23A4 /* main.m in Sources */,
 				AA939CA11C43B60800E37C2F /* TweetCell.m in Sources */,
+				AA2551D01C451F880029ED2B /* TweetCellData+Tweet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
