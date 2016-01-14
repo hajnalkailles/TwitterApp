@@ -60,6 +60,7 @@
     self.tableView.estimatedRowHeight = 50.0;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     
+    [self.twitterManager setupWatchConnectivity];
     [self.twitterManager getRecentTweetsOnCompletion:^(NSArray* tweetsArray) {
         [self.tweetArray addObjectsFromArray:tweetsArray];
         dispatch_async(dispatch_get_main_queue(), ^{

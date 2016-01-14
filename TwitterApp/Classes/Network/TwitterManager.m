@@ -10,8 +10,22 @@
 #import <Social/Social.h>
 #import <Accounts/Accounts.h>
 #import "Tweet.h"
+#import <WatchConnectivity/WatchConnectivity.h>
+
+@interface TwitterManager()
+@property (nonatomic, copy) NSMutableArray* fetchedTweets;
+@end
 
 @implementation TwitterManager
+
+-(NSMutableArray *)fetchedTweets
+{
+    if (!_fetchedTweets)
+    {
+        _fetchedTweets = [[NSMutableArray alloc] init];
+    }
+    return _fetchedTweets;
+}
 
 -(SLComposeViewController *)composeTweet
 {
@@ -44,13 +58,17 @@
                         completionHandler:^(NSURL *localfile, NSURLResponse *response, NSError *error){
                             if (!error){
                                 NSData *jsonResults = [NSData dataWithContentsOfURL: localfile];
-                                NSDictionary *tweetDictionary =  [NSJSONSerialization JSONObjectWithData:jsonResults options:NSJSONReadingMutableContainers error:NULL];
+                                NSDictionary *tweetDictionary =  [NSJSONSerialization JSONObjectWithData:jsonResults options:0 error:NULL];
                                 
                                 NSMutableArray *tweetList = [[NSMutableArray alloc] init];
+                                
                                 for (NSDictionary* tweet in tweetDictionary)
                                 {
-                                    [tweetList addObject:[[Tweet alloc] initWithDictionary: tweet]];
+                                    Tweet *myTweet = [[Tweet alloc] initWithDictionary: tweet];
+                                    [tweetList addObject:myTweet];
                                 }
+                                self.fetchedTweets = tweetList;
+                                [self sendRecentTweetsToWatch];
                                 completionBlock(tweetList);
                             }
                         }];
@@ -58,6 +76,34 @@
                 }
             }
     }];
+}
+
+-(void)setupWatchConnectivity {
+    if ([WCSession isSupported]) {
+        WCSession *session = [WCSession defaultSession];
+        session.delegate = self;
+        [session activateSession];
+    }
+}
+
+-(void)sendRecentTweetsToWatch {
+    if ([WCSession isSupported]) {
+        WCSession *session = [WCSession defaultSession];
+        if (session.watchAppInstalled) {
+            
+            NSMutableDictionary *tweetsToSendDictionary = [[NSMutableDictionary alloc] init];
+            int index = 0;
+            for (Tweet *tweet in self.fetchedTweets)
+            {
+                TweetCellData *celldata = [tweet cellDataRepresentation];
+                NSDictionary *newTweet = @{TWEET_JSON_TWEETMESSAGE: celldata.tweetMessage, TWEET_JSON_TWITTERUSERNAME: celldata.twitterUsername, TWEET_JSON_TWEETTIME: celldata.tweetTime, TWEET_JSON_TWITTERAVATAR: celldata.profilePictureURL};
+                [tweetsToSendDictionary setValue:newTweet forKey:[NSString stringWithFormat:@"%d", index]];
+                index++;
+            }
+            
+            [session updateApplicationContext: tweetsToSendDictionary error:nil];
+        }
+    }
 }
 
 @end

@@ -9,12 +9,6 @@
 #import "Tweet.h"
 #import "TweetCellData.h"
 
-#define TWEET_JSON_TWEETMESSAGE @"text"
-#define TWEET_JSON_TWEETTIME @"created_at"
-#define TWEET_JSON_TWITTERUSER @"user"
-#define TWEET_JSON_TWITTERUSERNAME @"screen_name"
-#define TWEET_JSON_TWITTERAVATAR @"profile_image_url"
-
 @interface  Tweet()
 @property (nonatomic, copy, readonly) NSString *twitterUsername;
 @property (nonatomic, copy, readonly) NSString *tweetMessage;
@@ -33,6 +27,19 @@
         _twitterUsername = [NSString stringWithFormat:@"@%@", [[tweetDictionary valueForKey:TWEET_JSON_TWITTERUSER] valueForKey:TWEET_JSON_TWITTERUSERNAME]];
         _tweetTime = [self calculateElapsedTimeFromString: [tweetDictionary valueForKey:TWEET_JSON_TWEETTIME]];
         _profilePictureURL= [[tweetDictionary valueForKey:TWEET_JSON_TWITTERUSER] valueForKey:TWEET_JSON_TWITTERAVATAR];
+    }
+    return self;
+}
+
+-(instancetype)initWithSimpleDictionary:(NSDictionary *)tweetDictionary
+{
+    self = [super init];
+    if (self)
+    {
+        _tweetMessage = [tweetDictionary valueForKey:TWEET_JSON_TWEETMESSAGE];
+        _twitterUsername = [tweetDictionary valueForKey:TWEET_JSON_TWITTERUSERNAME];
+        _tweetTime = [tweetDictionary valueForKey:TWEET_JSON_TWEETTIME];
+        _profilePictureURL = [tweetDictionary valueForKey:TWEET_JSON_TWITTERAVATAR];
     }
     return self;
 }

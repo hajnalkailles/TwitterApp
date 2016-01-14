@@ -19,7 +19,60 @@
 		AA939CB01C43E9B000E37C2F /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA939CAF1C43E9B000E37C2F /* Social.framework */; };
 		AA939CB31C43EA7900E37C2F /* TwitterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AA939CB21C43EA7900E37C2F /* TwitterManager.m */; };
 		AA939CB71C45145100E37C2F /* Tweet.m in Sources */ = {isa = PBXBuildFile; fileRef = AA939CB61C45145100E37C2F /* Tweet.m */; };
+		AADDD91F1C47B14300E08995 /* TweetRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = AADDD91E1C47B14300E08995 /* TweetRowController.m */; };
+		AADDD9211C47B6C800E08995 /* Tweet.m in Sources */ = {isa = PBXBuildFile; fileRef = AA939CB61C45145100E37C2F /* Tweet.m */; };
+		AADDD9221C47B6FF00E08995 /* TweetCellData.m in Sources */ = {isa = PBXBuildFile; fileRef = AA939CAD1C43D51C00E37C2F /* TweetCellData.m */; };
+		AADE8DED1C467C6200E0DE77 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AADE8DEB1C467C6200E0DE77 /* Interface.storyboard */; };
+		AADE8DEF1C467C6200E0DE77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AADE8DEE1C467C6200E0DE77 /* Assets.xcassets */; };
+		AADE8DF61C467C6200E0DE77 /* TwitterAppWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = AADE8DF51C467C6200E0DE77 /* TwitterAppWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		AADE8DFE1C467C6200E0DE77 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = AADE8DFD1C467C6200E0DE77 /* InterfaceController.m */; };
+		AADE8E011C467C6200E0DE77 /* ExtensionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AADE8E001C467C6200E0DE77 /* ExtensionDelegate.m */; };
+		AADE8E041C467C6200E0DE77 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = AADE8E031C467C6200E0DE77 /* NotificationController.m */; };
+		AADE8E061C467C6200E0DE77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AADE8E051C467C6200E0DE77 /* Assets.xcassets */; };
+		AADE8E0B1C467C6200E0DE77 /* TwitterAppWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = AADE8DE91C467C6200E0DE77 /* TwitterAppWatch.app */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AADE8DF71C467C6200E0DE77 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA3DBDD81C43A5AE00DB23A4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AADE8DF41C467C6200E0DE77;
+			remoteInfo = "TwitterAppWatch Extension";
+		};
+		AADE8E081C467C6200E0DE77 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA3DBDD81C43A5AE00DB23A4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AADE8DE81C467C6200E0DE77;
+			remoteInfo = TwitterAppWatch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AADE8E0A1C467C6200E0DE77 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				AADE8E0B1C467C6200E0DE77 /* TwitterAppWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AADE8E111C467C6200E0DE77 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				AADE8DF61C467C6200E0DE77 /* TwitterAppWatch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		AA3DBDE01C43A5AE00DB23A4 /* TwitterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,6 +95,22 @@
 		AA939CB21C43EA7900E37C2F /* TwitterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TwitterManager.m; path = Classes/Network/TwitterManager.m; sourceTree = "<group>"; };
 		AA939CB51C45145100E37C2F /* Tweet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tweet.h; path = Classes/Model/Tweet.h; sourceTree = "<group>"; };
 		AA939CB61C45145100E37C2F /* Tweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tweet.m; path = Classes/Model/Tweet.m; sourceTree = "<group>"; };
+		AADDD91D1C47B14300E08995 /* TweetRowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetRowController.h; sourceTree = "<group>"; };
+		AADDD91E1C47B14300E08995 /* TweetRowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetRowController.m; sourceTree = "<group>"; };
+		AADE8DE91C467C6200E0DE77 /* TwitterAppWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterAppWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AADE8DEC1C467C6200E0DE77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		AADE8DEE1C467C6200E0DE77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AADE8DF01C467C6200E0DE77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AADE8DF51C467C6200E0DE77 /* TwitterAppWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "TwitterAppWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AADE8DFB1C467C6200E0DE77 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		AADE8DFC1C467C6200E0DE77 /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		AADE8DFD1C467C6200E0DE77 /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		AADE8DFF1C467C6200E0DE77 /* ExtensionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtensionDelegate.h; sourceTree = "<group>"; };
+		AADE8E001C467C6200E0DE77 /* ExtensionDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtensionDelegate.m; sourceTree = "<group>"; };
+		AADE8E021C467C6200E0DE77 /* NotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
+		AADE8E031C467C6200E0DE77 /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
+		AADE8E051C467C6200E0DE77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AADE8E071C467C6200E0DE77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +122,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AADE8DF21C467C6200E0DE77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -61,6 +137,8 @@
 			children = (
 				AA939CAF1C43E9B000E37C2F /* Social.framework */,
 				AA3DBDE21C43A5AE00DB23A4 /* TwitterApp */,
+				AADE8DEA1C467C6200E0DE77 /* TwitterAppWatch */,
+				AADE8DF91C467C6200E0DE77 /* TwitterAppWatch Extension */,
 				AA3DBDE11C43A5AE00DB23A4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -69,6 +147,8 @@
 			isa = PBXGroup;
 			children = (
 				AA3DBDE01C43A5AE00DB23A4 /* TwitterApp.app */,
+				AADE8DE91C467C6200E0DE77 /* TwitterAppWatch.app */,
+				AADE8DF51C467C6200E0DE77 /* TwitterAppWatch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -154,6 +234,42 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		AADE8DEA1C467C6200E0DE77 /* TwitterAppWatch */ = {
+			isa = PBXGroup;
+			children = (
+				AADE8DEB1C467C6200E0DE77 /* Interface.storyboard */,
+				AADE8DEE1C467C6200E0DE77 /* Assets.xcassets */,
+				AADE8DF01C467C6200E0DE77 /* Info.plist */,
+			);
+			path = TwitterAppWatch;
+			sourceTree = "<group>";
+		};
+		AADE8DF91C467C6200E0DE77 /* TwitterAppWatch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				AADE8DFC1C467C6200E0DE77 /* InterfaceController.h */,
+				AADE8DFD1C467C6200E0DE77 /* InterfaceController.m */,
+				AADE8DFF1C467C6200E0DE77 /* ExtensionDelegate.h */,
+				AADE8E001C467C6200E0DE77 /* ExtensionDelegate.m */,
+				AADE8E021C467C6200E0DE77 /* NotificationController.h */,
+				AADE8E031C467C6200E0DE77 /* NotificationController.m */,
+				AADDD91D1C47B14300E08995 /* TweetRowController.h */,
+				AADDD91E1C47B14300E08995 /* TweetRowController.m */,
+				AADE8E051C467C6200E0DE77 /* Assets.xcassets */,
+				AADE8E071C467C6200E0DE77 /* Info.plist */,
+				AADE8DFA1C467C6200E0DE77 /* Supporting Files */,
+			);
+			path = "TwitterAppWatch Extension";
+			sourceTree = "<group>";
+		};
+		AADE8DFA1C467C6200E0DE77 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AADE8DFB1C467C6200E0DE77 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -164,15 +280,51 @@
 				AA3DBDDC1C43A5AE00DB23A4 /* Sources */,
 				AA3DBDDD1C43A5AE00DB23A4 /* Frameworks */,
 				AA3DBDDE1C43A5AE00DB23A4 /* Resources */,
+				AADE8E0A1C467C6200E0DE77 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				AADE8E091C467C6200E0DE77 /* PBXTargetDependency */,
 			);
 			name = TwitterApp;
 			productName = TwitterApp;
 			productReference = AA3DBDE01C43A5AE00DB23A4 /* TwitterApp.app */;
 			productType = "com.apple.product-type.application";
+		};
+		AADE8DE81C467C6200E0DE77 /* TwitterAppWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AADE8E121C467C6200E0DE77 /* Build configuration list for PBXNativeTarget "TwitterAppWatch" */;
+			buildPhases = (
+				AADE8DE71C467C6200E0DE77 /* Resources */,
+				AADE8E111C467C6200E0DE77 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AADE8DF81C467C6200E0DE77 /* PBXTargetDependency */,
+			);
+			name = TwitterAppWatch;
+			productName = TwitterAppWatch;
+			productReference = AADE8DE91C467C6200E0DE77 /* TwitterAppWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		AADE8DF41C467C6200E0DE77 /* TwitterAppWatch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AADE8E101C467C6200E0DE77 /* Build configuration list for PBXNativeTarget "TwitterAppWatch Extension" */;
+			buildPhases = (
+				AADE8DF11C467C6200E0DE77 /* Sources */,
+				AADE8DF21C467C6200E0DE77 /* Frameworks */,
+				AADE8DF31C467C6200E0DE77 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TwitterAppWatch Extension";
+			productName = "TwitterAppWatch Extension";
+			productReference = AADE8DF51C467C6200E0DE77 /* TwitterAppWatch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -184,6 +336,12 @@
 				ORGANIZATIONNAME = "Hegyi Hajnalka";
 				TargetAttributes = {
 					AA3DBDDF1C43A5AE00DB23A4 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					AADE8DE81C467C6200E0DE77 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					AADE8DF41C467C6200E0DE77 = {
 						CreatedOnToolsVersion = 7.2;
 					};
 				};
@@ -202,6 +360,8 @@
 			projectRoot = "";
 			targets = (
 				AA3DBDDF1C43A5AE00DB23A4 /* TwitterApp */,
+				AADE8DE81C467C6200E0DE77 /* TwitterAppWatch */,
+				AADE8DF41C467C6200E0DE77 /* TwitterAppWatch Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -215,6 +375,23 @@
 				AA3DBDF01C43A5AE00DB23A4 /* Assets.xcassets in Resources */,
 				AA939CAB1C43CEB600E37C2F /* photo.png in Resources */,
 				AA3DBDEE1C43A5AE00DB23A4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AADE8DE71C467C6200E0DE77 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AADE8DEF1C467C6200E0DE77 /* Assets.xcassets in Resources */,
+				AADE8DED1C467C6200E0DE77 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AADE8DF31C467C6200E0DE77 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AADE8E061C467C6200E0DE77 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,7 +412,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AADE8DF11C467C6200E0DE77 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AADDD91F1C47B14300E08995 /* TweetRowController.m in Sources */,
+				AADE8E011C467C6200E0DE77 /* ExtensionDelegate.m in Sources */,
+				AADDD9211C47B6C800E08995 /* Tweet.m in Sources */,
+				AADDD9221C47B6FF00E08995 /* TweetCellData.m in Sources */,
+				AADE8DFE1C467C6200E0DE77 /* InterfaceController.m in Sources */,
+				AADE8E041C467C6200E0DE77 /* NotificationController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AADE8DF81C467C6200E0DE77 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AADE8DF41C467C6200E0DE77 /* TwitterAppWatch Extension */;
+			targetProxy = AADE8DF71C467C6200E0DE77 /* PBXContainerItemProxy */;
+		};
+		AADE8E091C467C6200E0DE77 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AADE8DE81C467C6200E0DE77 /* TwitterAppWatch */;
+			targetProxy = AADE8E081C467C6200E0DE77 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		AA3DBDEC1C43A5AE00DB23A4 /* Main.storyboard */ = {
@@ -252,6 +455,14 @@
 				AA3DBDF21C43A5AE00DB23A4 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		AADE8DEB1C467C6200E0DE77 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AADE8DEC1C467C6200E0DE77 /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -363,6 +574,64 @@
 			};
 			name = Release;
 		};
+		AADE8E0C1C467C6200E0DE77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				IBSC_MODULE = TwitterAppWatch_Extension;
+				INFOPLIST_FILE = TwitterAppWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.hajhegyi.TwitterApp.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Debug;
+		};
+		AADE8E0D1C467C6200E0DE77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				IBSC_MODULE = TwitterAppWatch_Extension;
+				INFOPLIST_FILE = TwitterAppWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.hajhegyi.TwitterApp.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Release;
+		};
+		AADE8E0E1C467C6200E0DE77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "TwitterAppWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.hajhegyi.TwitterApp.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Debug;
+		};
+		AADE8E0F1C467C6200E0DE77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "TwitterAppWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.hajhegyi.TwitterApp.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -380,6 +649,24 @@
 			buildConfigurations = (
 				AA3DBDF81C43A5AE00DB23A4 /* Debug */,
 				AA3DBDF91C43A5AE00DB23A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AADE8E101C467C6200E0DE77 /* Build configuration list for PBXNativeTarget "TwitterAppWatch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AADE8E0E1C467C6200E0DE77 /* Debug */,
+				AADE8E0F1C467C6200E0DE77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AADE8E121C467C6200E0DE77 /* Build configuration list for PBXNativeTarget "TwitterAppWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AADE8E0C1C467C6200E0DE77 /* Debug */,
+				AADE8E0D1C467C6200E0DE77 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
