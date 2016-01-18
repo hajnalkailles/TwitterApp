@@ -7,68 +7,77 @@
 //
 
 #import "InterfaceController.h"
-#import <WatchConnectivity/WatchConnectivity.h>
 #import "Tweet.h"
 #import "TweetRowController.h"
 
-@interface InterfaceController()
-@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *noTweetsLabel;
-@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceTable *tweetTable;
-@property (nonatomic) NSMutableArray* tweetList;    //of Tweets
+#import <WatchConnectivity/WatchConnectivity.h>
+
+@interface InterfaceController ()
+
+@property(nonatomic,copy) NSMutableArray *tweetList;    //of Tweets
+
+- (NSMutableArray *)tweetList;
+- (void)awakeWithContext:(id)context;
+- (void)updateTweetTable;
+- (void)setupWatchConnectivity;
+- (void)session:(WCSession *)session didReceiveApplicationContext:(NSDictionary<NSString *,id> *)applicationContext;
+
 @end
 
 @implementation InterfaceController
 
--(NSMutableArray *)tweetList {
-    if (!_tweetList) {
+#pragma mark - Initialization
+
+- (NSMutableArray *)tweetList
+{
+    if (_tweetList == nil)
+    {
         _tweetList = [[NSMutableArray alloc] init];
     }
     return _tweetList;
 }
 
-- (void)awakeWithContext:(id)context {
+- (void)awakeWithContext:(id)context
+{
     [super awakeWithContext:context];
     [self setupWatchConnectivity];
     [self updateTweetTable];
 }
 
-- (void)willActivate {
-    // This method is called when watch view controller is about to be visible to user
-    [super willActivate];
-}
+#pragma mark - Table update
 
-- (void)didDeactivate {
-    // This method is called when watch view controller is no longer visible
-    [super didDeactivate];
-}
-
--(void)updateTweetTable
+- (void)updateTweetTable
 {
-    if ([self.tweetList count] > 0) {
+    if ([self.tweetList count] > 0)
+    {
         [self.noTweetsLabel setHidden:YES];
-    } else {
+    } else
+    {
         [self.noTweetsLabel setHidden:NO];
     }
     [self.tweetTable setNumberOfRows:[self.tweetList count] withRowType:@"TweetRowType"];
-    int index = 0;
-    for (id tweet in self.tweetList) {
-        TweetRowController *controller = [self.tweetTable rowControllerAtIndex:index];
-        controller.tweetCellData = [tweet cellDataRepresentation];
-        index++;
-    }
+    [self.tweetList enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        TweetRowController *controller = [self.tweetTable rowControllerAtIndex:idx];
+        controller.tweetCellData = [obj cellDataRepresentation];
+    }];
 }
 
--(void)setupWatchConnectivity {
-    if ([WCSession isSupported]) {
+#pragma mark - WatchConnectivity
+
+- (void)setupWatchConnectivity
+{
+    if ([WCSession isSupported] == YES)
+    {
         WCSession *session  = [WCSession defaultSession];
         session.delegate = self;
         [session activateSession];
     }
 }
 
--(void)session:(WCSession *)session didReceiveApplicationContext:(NSDictionary<NSString *,id> *)applicationContext
+- (void)session:(WCSession *)session didReceiveApplicationContext:(NSDictionary<NSString *,id> *)applicationContext
 {
-    for (int index = 0; index < [applicationContext count]; index++) {
+    for (int index = 0; index < [applicationContext count]; index++)
+    {
         NSDictionary *newTweet = [applicationContext valueForKey:[NSString stringWithFormat:@"%d", index]];
         Tweet *tweet = [[Tweet alloc] initWithSimpleDictionary:newTweet];
         [self.tweetList addObject:tweet];

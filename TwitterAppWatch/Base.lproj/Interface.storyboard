@@ -49,8 +49,8 @@
                         </group>
                     </items>
                     <connections>
-                        <outlet property="noTweetsLabel" destination="swx-34-ciS" id="eZU-ME-iMV"/>
-                        <outlet property="tweetTable" destination="hNz-2k-NkV" id="vbD-8C-lYt"/>
+                        <outlet property="noTweetsLabel" destination="swx-34-ciS" id="b0l-cK-9Pd"/>
+                        <outlet property="tweetTable" destination="hNz-2k-NkV" id="UBX-Oj-o2L"/>
                     </connections>
                 </controller>
             </objects>

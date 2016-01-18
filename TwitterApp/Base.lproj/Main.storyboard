@@ -80,7 +80,7 @@
                     <navigationItem key="navigationItem" title="TwitterApp" id="2gu-4K-6c9">
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="YSr-dZ-rg0">
                             <connections>
-                                <action selector="postTweet:" destination="TJe-qV-NVg" id="dbw-gK-Noa"/>
+                                <action selector="postTweet:" destination="TJe-qV-NVg" id="uVg-Md-h8z"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TweetsTableViewController : UITableViewController
+@interface TweetsTableViewController : UITableViewController <UISearchResultsUpdating>
+
+- (IBAction)postTweet:(UIBarButtonItem *)sender;
 
 @end

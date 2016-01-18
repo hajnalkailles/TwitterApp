@@ -54,11 +54,10 @@
                 
                 NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration ephemeralSessionConfiguration];
                 NSURLSession *session = [NSURLSession sessionWithConfiguration:configuration];
-                NSURLSessionDownloadTask *task = [session downloadTaskWithRequest:twitterInfoRequest.preparedURLRequest
-                        completionHandler:^(NSURL *localfile, NSURLResponse *response, NSError *error){
+                NSURLSessionDataTask *task = [session dataTaskWithRequest:twitterInfoRequest.preparedURLRequest
+                        completionHandler:^(NSData *data, NSURLResponse *response, NSError *error){
                             if (!error){
-                                NSData *jsonResults = [NSData dataWithContentsOfURL: localfile];
-                                NSDictionary *tweetDictionary =  [NSJSONSerialization JSONObjectWithData:jsonResults options:0 error:NULL];
+                                NSDictionary *tweetDictionary =  [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
                                 
                                 NSMutableArray *tweetList = [[NSMutableArray alloc] init];
                                 
